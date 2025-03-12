@@ -23,7 +23,8 @@ def sent_analyzer():
 
     if label is None or score is None:
         return "Invalid input! Try again."
-
+    elif label is "Unknown" or score is "Unknown":
+        return "You didn't input a word, did you?"
     return (f"The given text has been identified as {label.split('_')[1]}" +
             f"with a score of {score}")
 
